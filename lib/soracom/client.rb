@@ -316,8 +316,8 @@ module Soracom
       @api.put(path: "/event_handlers/#{handler_id}", payload: req)
     end
 
-    # イベントハンドラーを無視する
-    def set_ignore_handler(imsi, handler_id)
+    # イベントハンドラーを無視する設定を削除
+    def delete_ignore_handler(imsi, handler_id)
       @api.delete(path: "/event_handlers/#{handler_id}/subscribers/#{imsi}/ignore")
     end
       
